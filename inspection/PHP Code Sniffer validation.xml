@@ -1,0 +1,8 @@
+<profile version="1.0">
+  <option name="myName" value="PHP Code Sniffer validation" />
+  <option name="singleTool" value="PhpCSValidationInspection" />
+  <inspection_tool class="PhpCSValidationInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+    <option name="CODING_STANDARD" value="Custom" />
+    <option name="CUSTOM_RULESET_PATH" value="$USER_HOME$/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/BluBolt/ruleset.xml" />
+  </inspection_tool>
+</profile>
