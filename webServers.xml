@@ -1,9 +1,0 @@
-<application>
-  <component name="WebServers">
-    <option name="servers">
-      <webServer id="3298dfd3-f9cc-4a94-b20c-6d756a8a6c4a" name="Kipos" url="http://kipos.dev">
-        <fileTransfer accessType="LOCAL" />
-      </webServer>
-    </option>
-  </component>
-</application>
