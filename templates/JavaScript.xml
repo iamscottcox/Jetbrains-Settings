@@ -11,11 +11,23 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="cl" value="console.log($END$);" description="Inserts a console.log() statement" toReformat="false" toShortenFQNames="true">
+  <template name="ce" value="console.error($END$);" description="Inserts a console.error() statement" toReformat="false" toShortenFQNames="true" />
+  <template name="cl" value="($PARAMS$) =&gt; (&#10;    $END$&#10;)" description="Inserts a console.log() statement" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="ec" value="export const = " description="Inserts and export const" toReformat="false" toShortenFQNames="true" />
-  <template name="ce" value="console.error($END$);" description="Inserts a console.error() statement" toReformat="false" toShortenFQNames="true" />
+  <template name="ec" value="export const $PARAMS$ = $END$" description="Inserts an export const statement" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="()o" value="($PARAMS$) =&gt; ({&#10;    $END$&#10;});" description="Inserts an arrow function object return block" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
