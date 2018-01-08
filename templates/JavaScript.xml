@@ -11,21 +11,42 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="ce" value="console.error($END$);" description="Inserts a console.error() statement" toReformat="false" toShortenFQNames="true" />
+  <template name="ce" value="console.error($END$);" description="Inserts a console.error() statement" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
   <template name="cl" value="($PARAMS$) =&gt; (&#10;    $END$&#10;)" description="Inserts a console.log() statement" toReformat="true" toShortenFQNames="true">
     <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="ec" value="export const $PARAMS$ = $END$" description="Inserts an export const statement" toReformat="true" toShortenFQNames="true">
-    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="ec" value="export const $NAME$ = $END$" description="Inserts an export const statement" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
   <template name="()o" value="($PARAMS$) =&gt; ({&#10;    $END$&#10;});" description="Inserts an arrow function object return block" toReformat="true" toShortenFQNames="true">
     <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if ($CONDITION$) {&#10;&#9;$END$&#10;}" description="Inserts an if block" toReformat="true" toShortenFQNames="true">
+    <variable name="CONDITION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="else" value="else {&#10;&#9;$END$&#10;}" description="Inserts an else block" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="elseif" value="else if ($CONDITION$) {&#10;&#9;$END$&#10;}" description="Inserts an else if block" toReformat="false" toShortenFQNames="true">
+    <variable name="CONDITION" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
