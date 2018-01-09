@@ -78,4 +78,16 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="mstp" value="const mapStateToProps = ($PARAMS$) =&gt; ({$END$});" description="Inserts a mapStateToProps const" toReformat="false" toShortenFQNames="true">
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="mdtp" value="const mapDispatchToProps = ($PARAMS$) =&gt; ({$END$});" description="Inserts a mapDispatchToProps const" toReformat="false" toShortenFQNames="true">
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
