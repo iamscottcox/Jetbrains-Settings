@@ -90,4 +90,10 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="cg" value="console.group($GROUP_NAME$)&#10;$END$&#10;console.groupEnd();" description="Inserts a console.group() block" toReformat="false" toShortenFQNames="true">
+    <variable name="GROUP_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
