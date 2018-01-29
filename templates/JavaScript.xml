@@ -127,4 +127,12 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="sgi" value="$STATE$.getIn(['$PATH$']$DEFAULT$)" description="Inserts a .getIn method call" toReformat="false" toShortenFQNames="true">
+    <variable name="STATE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DEFAULT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
