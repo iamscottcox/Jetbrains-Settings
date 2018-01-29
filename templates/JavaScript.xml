@@ -11,7 +11,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="ce" value="console.error($END$);" description="Inserts a console.error() statement" toReformat="false" toShortenFQNames="true">
+  <template name="ce" value="console.error($END$);" description="Inserts a console.error() statement" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
@@ -44,7 +44,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="elseif" value="else if ($CONDITION$) {&#10;&#9;$END$&#10;}" description="Inserts an else if block" toReformat="false" toShortenFQNames="true">
+  <template name="elseif" value="else if ($CONDITION$) {&#10;&#9;$END$&#10;}" description="Inserts an else if block" toReformat="true" toShortenFQNames="true">
     <variable name="CONDITION" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
@@ -56,36 +56,67 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="l" value="let $NAME$ = $END$" description="Inserts let statement" toReformat="false" toShortenFQNames="true">
+  <template name="l" value="let $NAME$ = $END$" description="Inserts let statement" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="l;" value="let $NAME$;" description="Inserts uninitialised let statement" toReformat="false" toShortenFQNames="true">
+  <template name="l;" value="let $NAME$;" description="Inserts uninitialised let statement" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="cls" value="console.log('$END$');" description="Inserts a console.log() string statement" toReformat="false" toShortenFQNames="true">
+  <template name="cls" value="console.log('$END$');" description="Inserts a console.log() string statement" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="cll" value="console.log(`$END$`);" description="Inserts a console.log() string literal statement" toReformat="false" toShortenFQNames="true">
+  <template name="cll" value="console.log(`$END$`);" description="Inserts a console.log() string literal statement" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="mstp" value="const mapStateToProps = ($PARAMS$) =&gt; ({$END$});" description="Inserts a mapStateToProps const" toReformat="false" toShortenFQNames="true">
+  <template name="mstp" value="const mapStateToProps = ($PARAMS$) =&gt; ({$END$});" description="Inserts a mapStateToProps const" toReformat="true" toShortenFQNames="true">
     <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="mdtp" value="const mapDispatchToProps = ($PARAMS$) =&gt; ({$END$});" description="Inserts a mapDispatchToProps const" toReformat="false" toShortenFQNames="true">
+  <template name="mdtp" value="const mapDispatchToProps = ($PARAMS$) =&gt; ({$END$});" description="Inserts a mapDispatchToProps const" toReformat="true" toShortenFQNames="true">
     <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cg" value="console.group($GROUP_NAME$);&#10;$END$&#10;console.groupEnd();" description="Inserts a console.group() block" toReformat="true" toShortenFQNames="true">
+    <variable name="GROUP_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="=&gt;" value="=&gt; {&#10;  $END$&#10;}" description="Insert an arrow block after an unwrapped parameter" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cdm" value="componentDidMount($PARAMS$) {&#10;  $END$&#10;}" description="Inserts componentDidMount block" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="edf" value="export default function $NAME$($PARAMS$) {&#10;&#9;$END$&#10;}" description="Inserts an export default function block" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rc" value="class $NAME$ extends React.Component {&#10;&#9;render() {&#10;&#9;&#9;return(&#10;&#9;&#9;&#9;$RETURN$&#10;&#9;&#9;);&#10;&#9;}&#10;}" description="Inserts a class that extends React.Component" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RETURN" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
