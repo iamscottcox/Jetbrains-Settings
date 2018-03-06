@@ -18,6 +18,7 @@
       <mapping ext="opts" type="PLAIN_TEXT" />
       <mapping ext="crt" type="PLAIN_TEXT" />
       <mapping ext="properties" type="PLAIN_TEXT" />
+      <mapping ext="md" type="PLAIN_TEXT" />
       <mapping ext="appcache" type="PLAIN_TEXT" />
       <mapping ext="gz" type="PLAIN_TEXT" />
       <mapping ext="pem" type="PLAIN_TEXT" />
