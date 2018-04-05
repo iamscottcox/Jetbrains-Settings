@@ -161,4 +161,10 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="cliv" value="console.log('$VARIABLE$', $VARIABLE$.toJS());" description="Inserts a console.log() statement with a described Immutable.js variable" toReformat="false" toShortenFQNames="true">
+    <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
