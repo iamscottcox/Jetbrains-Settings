@@ -167,4 +167,10 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="cgs" value="console.group('$DESCRIPTION$');&#10;  $END$&#10;console.groupEnd();" description="Inserts a console.group() block with a string description" toReformat="true" toShortenFQNames="true">
+    <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
