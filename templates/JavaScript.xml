@@ -233,12 +233,12 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="react" value="import React from 'react';" description="Import React from React" toReformat="true" toShortenFQNames="true">
+  <template name="react" value="import React from 'react';&#10;import propTypes from 'prop-types';" description="Import React from React" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="connect" value="import { connect } from 'react-redux';" description="Import connect from React Redux" toReformat="true" toShortenFQNames="true">
+  <template name="connect" value="import { connect } from 'react-redux';&#10;&#10;$END$&#10;&#10;export default connect()();" description="Import connect from React Redux" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
