@@ -193,4 +193,65 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="foo" value="const foo = $EXPRESSION$;&#10;console.log('foo', foo);&#10;return foo; " description="Change a return into a variable" toReformat="false" toShortenFQNames="true">
+    <variable name="EXPRESSION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="import" value="import { $NAME$ } from '$END$';" description="Creates an import statement" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importd" value="import $NAME$ from '$END$';" description="Creates a default import statement" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="test" value="function test() {&#10;  console.log('test');&#10;}" description="This is a test" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cw" value="console.warn($END$);" description="Inserts a console.warn() statement" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cws" value="console.warn('$END$');" description="Inserts a console.warn() statement which contains a string" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cwv" value="console.warn('$DESCRIPTOR$', $VARIABLE$)" description="Inserts a console.warn() statement which contains a variable and descriptor" toReformat="true" toShortenFQNames="true">
+    <variable name="DESCRIPTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="react" value="import React from 'react';&#10;import propTypes from 'prop-types';" description="Import React from React" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="connect" value="import { connect } from 'react-redux';&#10;&#10;$END$&#10;&#10;export default connect()();" description="Import connect from React Redux" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="edc" value="export default class $NAME$ {&#10;    $END$&#10;}" description="Export default class" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ed" value="export default $END$" description="Export default" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
