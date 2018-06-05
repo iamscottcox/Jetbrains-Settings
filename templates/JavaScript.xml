@@ -276,4 +276,10 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="at" value="export const $ACTION_TYPE$ = '$ACTION_TYPE$'" description="Inserts a regular action type" toReformat="false" toShortenFQNames="true">
+    <variable name="ACTION_TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
