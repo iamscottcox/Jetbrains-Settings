@@ -78,13 +78,13 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="mstp" value="function mapStateToProps($PARAMS$) {&#10;&#9;return {$END$};&#10;}" description="Inserts a mapStateToProps const" toReformat="true" toShortenFQNames="true">
+  <template name="mstp" value="const mapStateToProps = ($PARAMS$) =&gt; ({&#10;&#9;$END$&#10;})" description="Inserts a mapStateToProps const" toReformat="true" toShortenFQNames="true">
     <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="mdtp" value="function mapDispatchToProps($PARAMS$) {&#10;&#9;return {$END$};&#10;}" description="Inserts a mapDispatchToProps const" toReformat="true" toShortenFQNames="true">
+  <template name="mdtp" value="const mapDispatchToProps = ($PARAMS$) =&gt; ({&#10;&#9;$END$&#10;})" description="Inserts a mapDispatchToProps const" toReformat="true" toShortenFQNames="true">
     <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
@@ -169,14 +169,16 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="clv" value="console.log('$VARIABLE$', $VARIABLE$);" description="Inserts a console.log() statement with a described variable" toReformat="false" toShortenFQNames="true">
+  <template name="clv" value="console.log('$DESCRIPTION$', $VARIABLE$);" description="Inserts a console.log() statement with a described variable" toReformat="false" toShortenFQNames="true">
     <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DESCRIPTION" expression="" defaultValue="VARIABLE" alwaysStopAt="false" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="cliv" value="console.log('$VARIABLE$', $VARIABLE$.toJS());" description="Inserts a console.log() statement with a described Immutable.js variable" toReformat="false" toShortenFQNames="true">
+  <template name="cliv" value="console.log('$DESCRIPTION$', $VARIABLE$.toJS());" description="Inserts a console.log() statement with a described Immutable.js variable" toReformat="false" toShortenFQNames="true">
     <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DESCRIPTION" expression="" defaultValue="VARIABLE" alwaysStopAt="false" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
@@ -195,18 +197,6 @@
   </template>
   <template name="foo" value="const foo = $EXPRESSION$;&#10;console.log('foo', foo);&#10;return foo; " description="Change a return into a variable" toReformat="false" toShortenFQNames="true">
     <variable name="EXPRESSION" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_SCRIPT" value="true" />
-    </context>
-  </template>
-  <template name="import" value="import { $NAME$ } from '$END$';" description="Creates an import statement" toReformat="false" toShortenFQNames="true">
-    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_SCRIPT" value="true" />
-    </context>
-  </template>
-  <template name="importd" value="import $NAME$ from '$END$';" description="Creates a default import statement" toReformat="true" toShortenFQNames="true">
-    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
@@ -249,6 +239,45 @@
     </context>
   </template>
   <template name="ed" value="export default $END$" description="Export default" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importa" value="import * as $ITEM$ from &quot;$MODULE$&quot;;&#10;$END$" description="Import statement - import * as b from 'a'" toReformat="true" toShortenFQNames="true">
+    <variable name="ITEM" expression="jsSuggestImportedEntityName()" defaultValue="Namespace" alwaysStopAt="true" />
+    <variable name="MODULE" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="importd" value="import $ITEM$ from &quot;$MODULE$&quot;;&#10;$END$" description="Import statement - import b from 'a'" toReformat="true" toShortenFQNames="true">
+    <variable name="ITEM" expression="jsSuggestImportedEntityName()" defaultValue="Namespace" alwaysStopAt="true" />
+    <variable name="MODULE" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="import" value="import {$ITEM$$END$} from &quot;$MODULE$&quot;;&#10;" description="Import statement - import {b} from 'a'" toReformat="true" toShortenFQNames="true">
+    <variable name="ITEM" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="MODULE" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="cd" value="const { $DECLARATIONS$ } = $VARIABLE$" description="Inserts a destructured const declaration" toReformat="false" toShortenFQNames="true">
+    <variable name="DECLARATIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="catch" value="catch (err) {&#10;  $END$&#10;}" description="Insert catch block" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="at" value="export const $ACTION_TYPE$ = '$ACTION_TYPE$'" description="Inserts a regular action type" toReformat="false" toShortenFQNames="true">
+    <variable name="ACTION_TYPE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
