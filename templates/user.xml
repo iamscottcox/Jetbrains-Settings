@@ -1,0 +1,9 @@
+<templateSet group="user">
+  <template name="propTypes" value="$COMPONENT$.propTypes = {&#10;    $PROPS$,&#10;};" description="Insert propTypes block" toReformat="false" toShortenFQNames="true">
+    <variable name="COMPONENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROPS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
