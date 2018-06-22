@@ -4,6 +4,7 @@
     <variable name="VAR1" expression="" defaultValue="&quot;FileName&quot;" alwaysStopAt="true" />
     <variable name="VAR2" expression="" defaultValue="&quot;normal&quot;" alwaysStopAt="true" />
     <variable name="VAR3" expression="" defaultValue="&quot;normal&quot;" alwaysStopAt="true" />
+    <context />
   </template>
   <template name="anim" value="animation: $END$;" description="animation:...;" toReformat="true" toShortenFQNames="true">
     <context />
@@ -292,7 +293,9 @@
   <template name="lh" value="line-height: $END$;" description="line-height:...;" toReformat="true" toShortenFQNames="true">
     <context />
   </template>
-  <template name="lg" value="background-image: linear-gradient($END$);" description="background-image: linear-gradient(...);" toReformat="true" toShortenFQNames="true" />
+  <template name="lg" value="background-image: linear-gradient($END$);" description="background-image: linear-gradient(...);" toReformat="true" toShortenFQNames="true">
+    <context />
+  </template>
   <template name="whs" value="white-space: $END$;" description="white-space:...;" toReformat="true" toShortenFQNames="true">
     <context />
   </template>
