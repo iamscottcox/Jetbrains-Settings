@@ -282,4 +282,11 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="rdc" value="function $NAME$($PARAMS$) {&#10;    $END$&#10;}&#10;&#10;$NAME$.propTypes = {&#10;&#10;}" description="Creates a &quot;dumb&quot; React component" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
