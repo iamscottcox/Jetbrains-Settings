@@ -286,9 +286,7 @@
   <template name="lh" value="line-height: $END$;" description="line-height:...;" toReformat="true" toShortenFQNames="true">
     <context />
   </template>
-  <template name="lg" value="background-image: linear-gradient($END$);" description="background-image: linear-gradient(...);" toReformat="true" toShortenFQNames="true">
-    <context />
-  </template>
+  <template name="lg" value="background-image: linear-gradient($END$);" description="background-image: linear-gradient(...);" toReformat="true" toShortenFQNames="true" />
   <template name="whs" value="white-space: $END$;" description="white-space:...;" toReformat="true" toShortenFQNames="true">
     <context />
   </template>
