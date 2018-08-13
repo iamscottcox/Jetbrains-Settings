@@ -289,7 +289,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="connect" value="import { connect } from 'react-redux';&#10;&#10;import $COMPONENT$ from '$PATH$';&#10;&#10;$END$&#10;&#10;export default connect()($COMPONENT$);" description="Import desctructured connect from React Redux" toReformat="true" toShortenFQNames="true">
+  <template name="connect" value="import { connect } from 'react-redux';&#10;&#10;import $COMPONENT$ from '$PATH$';&#10;&#10;const mapStateToProps = (state) =&gt; ({$END$})&#10;&#10;const mapDispatchToProps = (dispatch) =&gt; ({})&#10;&#10;export default connect(mapStateToProps, mapDispatchToProps)($COMPONENT$);" description="Import desctructured connect from React Redux" toReformat="true" toShortenFQNames="true">
     <variable name="COMPONENT" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
