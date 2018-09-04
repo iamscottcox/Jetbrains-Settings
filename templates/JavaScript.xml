@@ -78,12 +78,12 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="mstp" value="const mapStateToProps = (state) =&gt; ({&#10;&#9;$END$&#10;})" description="Inserts a mapStateToProps const" toReformat="true" toShortenFQNames="true">
+  <template name="mstp" value="export const mapStateToProps = (state) =&gt; ({&#10;&#9;$END$&#10;})" description="Inserts a mapStateToProps const" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="mdtp" value="const mapDispatchToProps = (dispatch) =&gt; ({&#10;&#9;$END$&#10;})" description="Inserts a mapDispatchToProps const" toReformat="true" toShortenFQNames="true">
+  <template name="mdtp" value="export const mapDispatchToProps = (dispatch) =&gt; ({&#10;&#9;$END$&#10;})" description="Inserts a mapDispatchToProps const" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
