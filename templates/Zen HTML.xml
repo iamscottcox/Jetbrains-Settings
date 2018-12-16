@@ -1,5 +1,7 @@
 <templateSet group="Zen HTML">
   <template name="c" value="&lt;!-- $END$ --&gt;" description="&lt;!-- --&gt;" toReformat="true" toShortenFQNames="true" deactivated="true">
-    <context />
+    <context>
+      <option name="JSP" value="true" />
+    </context>
   </template>
 </templateSet>
