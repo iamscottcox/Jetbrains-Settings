@@ -50,7 +50,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="c" value="const $NAME$ = $END$" description="Inserts const statement" toReformat="true" toShortenFQNames="true">
+  <template name="c" value="const $NAME$ = $END$" description="Inserts const statement" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
@@ -78,14 +78,12 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="mstp" value="const mapStateToProps = ($PARAMS$) =&gt; ({&#10;&#9;$END$&#10;})" description="Inserts a mapStateToProps const" toReformat="true" toShortenFQNames="true">
-    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="mstp" value="export const mapStateToProps = (state) =&gt; ({&#10;&#9;$END$&#10;})" description="Inserts a mapStateToProps const" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="mdtp" value="const mapDispatchToProps = ($PARAMS$) =&gt; ({&#10;&#9;$END$&#10;})" description="Inserts a mapDispatchToProps const" toReformat="true" toShortenFQNames="true">
-    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="mdtp" value="export const mapDispatchToProps = (dispatch) =&gt; ({&#10;&#9;$END$&#10;})" description="Inserts a mapDispatchToProps const" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
@@ -114,7 +112,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="rc" value="class $NAME$ extends React.Component {&#10;&#9;render() {&#10;&#9;&#9;return(&#10;&#9;&#9;&#9;$RETURN$&#10;&#9;&#9;);&#10;&#9;}&#10;}" description="Inserts a class that extends React.Component" toReformat="true" toShortenFQNames="true">
+  <template name="rc" value="class $NAME$ extends React.Component {&#10;&#9;render() {&#10;&#9;&#9;return(&#10;&#9;&#9;&#9;$RETURN$&#10;&#9;&#9;);&#10;&#9;}&#10;}&#10;&#10;$NAME$.propTypes = {}" description="Inserts a class that extends React.Component" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="RETURN" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -156,7 +154,7 @@
     </context>
   </template>
   <template name="req" value="const $VARIABLE$ = require('$PATH$');" description="Inserts a require statement as a const variable" toReformat="false" toShortenFQNames="true">
-    <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VARIABLE" expression="" defaultValue="PATH" alwaysStopAt="true" />
     <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
@@ -227,11 +225,6 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="connect" value="import { connect } from 'react-redux';&#10;&#10;$END$&#10;&#10;export default connect()();" description="Import connect from React Redux" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="JAVA_SCRIPT" value="true" />
-    </context>
-  </template>
   <template name="edc" value="export default class $NAME$ {&#10;    $END$&#10;}" description="Export default class" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -278,6 +271,51 @@
   </template>
   <template name="at" value="export const $ACTION_TYPE$ = '$ACTION_TYPE$'" description="Inserts a regular action type" toReformat="false" toShortenFQNames="true">
     <variable name="ACTION_TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rdc" value="function $NAME$($PARAMS$) {&#10;    $END$&#10;}&#10;&#10;$NAME$.propTypes = {&#10;&#10;}" description="Creates a &quot;dumb&quot; React component" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="connectd" value="import { connect } from 'react-redux';&#10;&#10;import { $COMPONENT$ } from '$PATH$';&#10;&#10;$END$&#10;&#10;export default connect()($COMPONENT$);" description="Import desctructured connect from React Redux" toReformat="true" toShortenFQNames="true">
+    <variable name="COMPONENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="connect" value="import { connect } from 'react-redux';&#10;&#10;import $COMPONENT$ from '$PATH$';&#10;&#10;const mapStateToProps = (state) =&gt; ({$END$})&#10;&#10;const mapDispatchToProps = (dispatch) =&gt; ({})&#10;&#10;export default connect(mapStateToProps, mapDispatchToProps)($COMPONENT$);" description="Import desctructured connect from React Redux" toReformat="true" toShortenFQNames="true">
+    <variable name="COMPONENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cliv?" value="if ($VARIABLE$ &amp;&amp; $VARIABLE$.toJS) {&#10;  console.log('$DESCRIPTION$', $VARIABLE$.toJS())&#10;} else {&#10;  console.log('$DESCRIPTION$', $VARIABLE$)&#10;}" description="Is it Immutable? Who knows? Let's check and console.log the value" toReformat="false" toShortenFQNames="true">
+    <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DESCRIPTION" expression="" defaultValue="VARIABLE" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="logic" value="function $NAME$($PARAMS$dispatch = store.dispatch, state = store.getState()) {&#10;  $END$&#10;}" description="Insert a logic function" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="fe" value="forEach($END$)" description="Insert a .forEach() statement" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="testStates" value="testStates.forEach((testState, testStateDescription) =&gt; {&#10;  describe(testStateDescription, () =&gt; {&#10;    $END$&#10;  })&#10;})" description="Adds in a testStates.forEach block" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
