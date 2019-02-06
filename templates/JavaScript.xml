@@ -296,7 +296,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="cliv?" value="if ($VARIABLE$ &amp;&amp; $VARIABLE$.toJS) {&#10;  console.log('$DESCRIPTION$', $VARIABLE$.toJS())&#10;} else {&#10;  console.log('$DESCRIPTION$', $VARIABLE$)&#10;}" description="Is it Immutable? Who knows? Let's check and console.log the value" toReformat="false" toShortenFQNames="true">
+  <template name="cliv?" value="if ($VARIABLE$ &amp;&amp; $VARIABLE$.toJS) {&#10;  console.log('$DESCRIPTION$.toJS()', $VARIABLE$.toJS())&#10;} else {&#10;  console.log('$DESCRIPTION$', $VARIABLE$)&#10;}" description="Is it Immutable? Who knows? Let's check and console.log the value" toReformat="false" toShortenFQNames="true">
     <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="DESCRIPTION" expression="" defaultValue="VARIABLE" alwaysStopAt="false" />
     <context>
