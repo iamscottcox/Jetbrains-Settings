@@ -21,6 +21,7 @@
       <mapping ext="appcache" type="PLAIN_TEXT" />
       <mapping ext="key" type="PLAIN_TEXT" />
       <mapping ext="env" type="PLAIN_TEXT" />
+      <mapping ext="glb" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
