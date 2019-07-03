@@ -1,0 +1,12 @@
+<templateSet group="React">
+  <template name="rsc" value="import React from 'react';&#10;&#10;const $TM_FILENAME_BASE$ = ($PARAMS$) =&gt; (&#10;  &lt;div&gt;&#10;    $END$&#10;  &lt;/div&gt;&#10;);&#10;&#10;export default $TM_FILENAME_BASE$;" description="Creates a stateless React component without PropTypes and ES6 module system" toReformat="false" toShortenFQNames="true">
+    <variable name="TM_FILENAME_BASE" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="&quot;&quot;" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="rscp" value="import React from 'react';&#10;import propTypes from 'prop-types';&#10;&#10;const $TM_FILENAME_BASE$ = ($PARAMS$) =&gt;&#10;  (&#10;    &lt;div&gt;&#10;      $END$                    &#10;    &lt;/div&gt;&#10;  );&#10;&#10;$TM_FILENAME_BASE$.propTypes = {&#10;   $END$&#10;};&#10;&#10;export default $TM_FILENAME_BASE$;" description="Creates a stateless React component with PropTypes and ES6 module system" toReformat="false" toShortenFQNames="true">
+    <variable name="TM_FILENAME_BASE" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="&quot;&quot;" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+</templateSet>
